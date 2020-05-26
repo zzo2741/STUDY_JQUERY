@@ -24,7 +24,7 @@ public class NaverSearchAPI extends HttpServlet {
 		String clientSecret = "yvr0V35qLc"; //애플리케이션 클라이언트 시크릿값"
 
 		String text = null;
-		int start= 0;
+		int start= 1;
 		int display = 0;
 		try {
 			//jsp페이지에서 입력한 검색어를 받아와서 변수처리
@@ -36,7 +36,7 @@ public class NaverSearchAPI extends HttpServlet {
 			throw new RuntimeException("검색어 인코딩 실패", e);
 		}
 
-		String apiURL = "https://openapi.naver.com/v1/search/blog?query=" + text + "&display=" + display + "&start=" + start + "&sort=date"; // json 결과
+		String apiURL = "https://openapi.naver.com/v1/search/blog?query=" + text + "&display=" + display + "&start=" + start; // json 결과
 		//String apiURL = "https://openapi.naver.com/v1/search/blog.xml?query="+ text; // xml 결과
 		Map<String, String> requestHeaders = new HashMap<>();
 		requestHeaders.put("X-Naver-Client-Id", clientId);

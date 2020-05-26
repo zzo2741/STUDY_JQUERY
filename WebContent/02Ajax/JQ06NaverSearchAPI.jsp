@@ -44,6 +44,7 @@
 		
 		$.each(d.items, function(index, item) {
 			str += "<ul>";
+			str += "	<li>" + (index+1) + "</li>";
 			str += "	<li>" + item.title + "</li>";
 			str += "	<li>" + item.description + "</li>";
 			str += "	<li>" + item.bloggername + "</li>";
@@ -66,7 +67,7 @@ ul {
 </style>
 </head>
 <body>
-	<div class="container">
+	<div class="container" style="border: 1px solid">
 		<div class="row">
 			<a href="../NaverSearchAPI.do?keyword=가산디지털단지역 맛집"> 네이버검색정보JSON바로가기 </a>
 		</div>
