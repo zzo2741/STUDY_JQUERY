@@ -20,7 +20,7 @@
 				dataType : "html", //콜백 데이터 타입
 				contentType : "text/html;charset:utf-8",
 				success : function(d) {
-					//console.log("성공 + d");
+					alert("성공 : " + d);
 					// 1. hidden으로 생성된 totalPrice의 값을 가져온다.
 					var totalPrice = parseInt($('#totalPrice').val());
 					// 2. 옵션의 value를 가져온다.
